@@ -84,7 +84,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'todo_list_db',
-        'HOST': 'localhost',
+        'HOST': 'matines.pythonanywhere.com',
         'USER': 'root',
         'PASSWORD': '1020DB_MA'
     }
