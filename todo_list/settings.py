@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-6_y)j$=vb^yzu^ylvu@ym&q+%s2i^#4c%_e(gasov5btovj0tj
 DEBUG = True
 
 
-ALLOWED_HOSTS=['*']
+ALLOWED_HOSTS = ['*']
 CORS_ORIGIN_ALLOW_ALL = True
 
 
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'todo',
- 
+
 ]
 
 MIDDLEWARE = [
@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': 'todo_list_db',
         'HOST': 'localhost',
         'USER': 'root',
-        'PASSWORD':'9431'
+        'PASSWORD': '1020DB_MA'
     }
 }
 
