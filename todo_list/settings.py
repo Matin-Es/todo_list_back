@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'todo',
+    'todo_list'
 
 ]
 
@@ -141,4 +142,7 @@ STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesSto
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    '/var/www/static/',
+]
