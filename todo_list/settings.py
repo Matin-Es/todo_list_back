@@ -89,7 +89,9 @@ DATABASES = {
         'HOST': 'ec2-52-210-97-223.eu-west-1.compute.amazonaws.com',
         'USER': 'trqzgyoryymymv',
         'PASSWORD': '96b69a65aba7a4bdb214b53666776962ac235185f7f43c77f7f6ca94480b2c0e',
-        'PORT':'5432'
+        'PORT':'5432',
+        'URI':'postgres://trqzgyoryymymv:96b69a65aba7a4bdb214b53666776962ac235185f7f43c77f7f6ca94480b2c0e@ec2-52-210-97-223.eu-west-1.compute.amazonaws.com:5432/d50c6u2mk5m424'
+
     }
 }
 
