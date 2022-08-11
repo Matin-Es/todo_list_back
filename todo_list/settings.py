@@ -85,10 +85,11 @@ WSGI_APPLICATION = 'todo_list.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'todo_list_db',
-        # 'HOST': 'localhost',
-        # 'USER': 'root',
-        # 'PASSWORD': '9431'
+        'NAME': 'd50c6u2mk5m424',
+        'HOST': 'ec2-52-210-97-223.eu-west-1.compute.amazonaws.com',
+        'USER': 'trqzgyoryymymv',
+        'PASSWORD': '96b69a65aba7a4bdb214b53666776962ac235185f7f43c77f7f6ca94480b2c0e',
+        'PORT':'5432'
     }
 }
 
@@ -128,6 +129,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT=os.path.join(BASE_DIR, 'staticfiles')
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -135,4 +138,3 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-django_heroku.settings(locals())
