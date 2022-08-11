@@ -11,6 +11,8 @@ drf-nested-routers = "*"
 mysqlclient = "*"
 django-cors-headers = "*"
 gunicorn = "*"
+whitenoise = "*"
+django-heroku = "*"
 
 [dev-packages]
 
