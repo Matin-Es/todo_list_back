@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import django_heroku
 from pathlib import Path
 import os
-
+from django.contrib.staticfiles import storage
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -43,8 +43,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'todo',
-  
-
 ]
 
 MIDDLEWARE = [
@@ -90,8 +88,8 @@ DATABASES = {
         'HOST': 'ec2-52-210-97-223.eu-west-1.compute.amazonaws.com',
         'USER': 'trqzgyoryymymv',
         'PASSWORD': '96b69a65aba7a4bdb214b53666776962ac235185f7f43c77f7f6ca94480b2c0e',
-        'PORT':'5432',
-        'URI':'postgres://trqzgyoryymymv:96b69a65aba7a4bdb214b53666776962ac235185f7f43c77f7f6ca94480b2c0e@ec2-52-210-97-223.eu-west-1.compute.amazonaws.com:5432/d50c6u2mk5m424'
+        'PORT': '5432',
+        'URI': 'postgres://trqzgyoryymymv:96b69a65aba7a4bdb214b53666776962ac235185f7f43c77f7f6ca94480b2c0e@ec2-52-210-97-223.eu-west-1.compute.amazonaws.com:5432/d50c6u2mk5m424'
 
     }
 }
@@ -132,10 +130,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT=os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 django_heroku.settings(locals())
 
-STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -143,6 +141,5 @@ STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesSto
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    '/var/www/static/',
+    os.path.join(BASE_DIR, 'static')
 ]
